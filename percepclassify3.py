@@ -14,7 +14,7 @@ stopwords = ["a", "about", "above", "after", "again", "against", "all", "am", "a
                      "who", "whom", "why", "with", "would", "you", "your", "yours", "yourself", "yourselves"]
 
 
-def readTestData():
+def readTestData():   #test.txt
     file = open(sys.argv[2], 'r', encoding="utf-8")
     return file
 
