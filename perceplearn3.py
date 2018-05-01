@@ -11,30 +11,23 @@ import operator
 global y1  # for Fake/True
 global y2  # for Neg / Pos
 
-weight1 = {}
-weight1[''] = {}
-
-weight2 = {}
-weight2[''] = {}
-
 featureVector = {}  # feature vector for both the classifiers.
+
 weights1 = {}
 weights2 = {}
+
 u1 = {}
 u2 = {}
 
 beta1 = 0
 beta2 = 0
 
+biasOne = 0
+biasTwo = 0
 
 def readFile():
     file = open(sys.argv[1], 'r', encoding="utf-8")   #train.txt
     return file
-
-
-biasOne = 0
-biasTwo = 0
-
 
 def calculateActivationFunctionForFirstClass(featureVector, weights, y1):
     #print("Calculating activation function for first class")
