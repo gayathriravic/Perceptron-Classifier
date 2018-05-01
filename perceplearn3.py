@@ -150,8 +150,8 @@ def trainData(file):
             if (decision2 == 1):  # update 2nd classifier
                 updateWeightsForSecondClass(featureVector, y2,c)
     return c
-def writeToFile(c):
 
+def writeToFile(c):
     global biasOne
     global biasTwo
     combinedProbability = {"weights1": weights1, "weights2": weights2, "biasOne": biasOne, "biasTwo": biasTwo}
@@ -166,6 +166,7 @@ def writeToFile(c):
     averaged = {"weights1" : u1,"weights2":u2,"biasOne": biasOne,"biasTwo":biasTwo}
     with open('averagedmodel.txt', 'w') as outfile:
         json.dump(averaged, outfile, indent=4)
+       
 if __name__ == '__main__':
     file = readFile()
     count = trainData(file)
