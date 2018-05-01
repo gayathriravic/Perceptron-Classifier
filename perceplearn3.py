@@ -28,7 +28,7 @@ beta2 = 0
 
 
 def readFile():
-    file = open(sys.argv[1], 'r', encoding="utf-8")
+    file = open(sys.argv[1], 'r', encoding="utf-8")   #train.txt
     return file
 
 
