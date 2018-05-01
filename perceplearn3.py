@@ -38,7 +38,6 @@ biasTwo = 0
 
 def calculateActivationFunctionForFirstClass(featureVector, weights, y1):
     #print("Calculating activation function for first class")
-
     frequencySum = 0
     for features in featureVector:
         frequency = featureVector[features]
@@ -60,13 +59,11 @@ stopwords = ["a", "about", "above", "after", "again", "against", "all", "am", "a
 
 def calculateActivationFunctionForSecondClass(featureVector, weights, y2):
     frequencySum = 0
-  
     for features in featureVector:
         frequency = featureVector[features]
         if features in weights2:
                 frequencySum += frequency * weights2[features]
     frequencySum += biasTwo
-
     if (y2 * frequencySum <= 0):
         updateWeight2 = 1
         return updateWeight2
